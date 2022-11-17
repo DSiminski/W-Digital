@@ -4,7 +4,8 @@ import { TextBox } from "../../componentes/textBox";
 import { BasicTable } from "../../componentes/BasicTable";
 import { Footer } from "../../componentes/footer";
 import { Accordions } from '../../componentes/Accordion2'
-const selectedExpense = () => {
+
+const SelectedExpense = () => {
   return (
     <div className="container">
       <Header
@@ -37,4 +38,4 @@ const selectedExpense = () => {
   );
 };
 
-export default selectedExpense;
+export default SelectedExpense;
