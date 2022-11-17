@@ -1,10 +1,10 @@
-import "./RegisterStyle.css";
+import "./historicoStyle.css";
 import { Header } from "../../componentes/header";
 import { TextBox } from "../../componentes/textBox";
 import { BasicTable } from "../../componentes/BasicTable";
 import { Footer } from "../../componentes/footer";
 
-const Register = () => {
+const Historico = () => {
   return (
     <div className="container">
       <Header
@@ -26,6 +26,7 @@ const Register = () => {
             valor="R$127,00"
           />
         </div>
+        <BasicTable />
       </div>
 
       <Footer/>
@@ -33,4 +34,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Historico;
