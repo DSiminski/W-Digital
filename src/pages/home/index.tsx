@@ -1,10 +1,18 @@
 import React from "react";
+import "./styles.css";
+
 import { Header } from "../../componentes/header";
 import { Button, RadioGroup } from "@mui/material";
 import { Footer } from "../../componentes/footer";
+import { TextBox } from "../../componentes/textBox";
+import { useNavigate } from 'react-router-dom';
 
 
-const Home = ( ) => {
+
+const Home = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="container">
       <Header
@@ -14,20 +22,29 @@ const Home = ( ) => {
       />
       <div className="container-home">
         <div className="container-inferior">
-            <div className="valor"></div>
+          <div className="valor"></div>
+        </div>
+
+        <div className="container-input">
+          <Button
+            className="container-value"
+            onClick={() => navigate('/historico')}
+          >
+            Expenses
+          </Button>
+        </div>
+
+        <div className="container-input">
+          <Button
+            className="container-value"
+            onClick={() => navigate('/register')}
+          >
+            New Expenses
+          </Button>
         </div>
       </div>
-      <div className="container-two">
-        <Button onClick={() => {alert('clicked');}}>Expenses</Button>
-      </div>
-      <div className="container-three">
-        <Button onClick={() => {alert('clicked');}}>New Expenses</Button>
-      </div>
-      <Footer/>
+      <Footer />
     </div>
-     
-      
   );
 };
 export default Home;
-

@@ -11,15 +11,40 @@ html {
   font-family: Nunito, sans-serif;
 }
 
+
 .container {
   width: 100%;
   margin: 0 auto;
 }
+
+
 .container-home {
   display: block;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 10px 90px 90px 80px
+  padding: 10px 90px 90px 80px;
 }
+
+.container-input {
+  
+width:100%;
+background-color: #fff;
+border-radius: 80px;
+overflow: hidden;
+padding: 20px ;
+border-color: #6a7dfe;
+border-style: solid;
+margin: 20px;
+
+}
+
+.container-value {
+  
+  font-family: Helvetica;
+  color: #fff;
+  align-items: left; 
+ }
+
+
 

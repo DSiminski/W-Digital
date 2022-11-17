@@ -33,6 +33,9 @@ export const Accordions = ({expanded }: AccordionProps) => {
           </Typography>
         </AccordionDetails>
       </Accordion>
+
+
+      
     </div>
   );
 };
