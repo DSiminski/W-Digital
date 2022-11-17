@@ -4,7 +4,7 @@ import Login from "./pages/login";
 import Historico from './pages/historico';
 import Register from './pages/register';
 import Home from './pages/home';
-
+import SelectedExpense from './pages/selectedExpense';
 function App() {
 
   return (
@@ -16,6 +16,8 @@ function App() {
            <Route path="/historico" element={< Historico/>}/> 
            <Route path="/register" element={< Register/>}/> 
            <Route path="/home" element={< Home/>}/> 
+
+
 
         </Routes>
     </BrowserRouter>
