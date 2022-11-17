@@ -5,6 +5,10 @@ import { ButtonComponent } from "../../componentes/button";
 import { TextFieldComponent } from "../../componentes/textfield";
 import { Header } from "../../componentes/header";
 import { TextBox } from "../../componentes/textBox";
+import { Footer } from "../../componentes/footer";
+
+import { Accordions } from "../../componentes/Accordion2";
+
 function handleForm() {}
 
 const Login = () => {
@@ -12,7 +16,7 @@ const Login = () => {
     <div className="container">
       <Header
         style={{ backgroundColor: "rgb(57, 71, 203)" }}
-        isLogin={true}
+        isHome={false}
         title="Welcome to your Wallet!"
       />
       <div className="container-login">
@@ -44,11 +48,7 @@ const Login = () => {
           </form>
         </div>
       </div>
-      <TextBox
-            style={{ backgroundColor: "rgb(57, 71, 203)" }}
-            title="Portfolio balance"
-            valor="RS500,00"
-          />
+      <Footer />
     </div>
   );
 };

@@ -3,17 +3,17 @@ import { useState } from "react";
 
 interface HeaderProps {
   title?: string;
-  isLogin?: boolean;
+  isHome?: boolean;
   style?: React.CSSProperties;
 }
 
-export const Header = ({ title, isLogin, style }: HeaderProps) => {
+export const Header = ({ title, isHome, style }: HeaderProps) => {
   return (
     <header>
       <div style={style}>
         <S.HeaderContainer>
           <S.Container>
-            {isLogin ? (
+            {isHome ? (
                 <h2>
               <S.Message>
                 Hello

@@ -1,32 +1,35 @@
-import "./historicoStyle.css";
+import "./selectedExpenseStyle.css";
 import { Header } from "../../componentes/header";
 import { TextBox } from "../../componentes/textBox";
 import { BasicTable } from "../../componentes/BasicTable";
 import { Footer } from "../../componentes/footer";
-
-const Historico = () => {
+import { Accordions } from '../../componentes/Accordion2'
+const selectedExpense = () => {
   return (
     <div className="container">
       <Header
-        style={{ backgroundColor: "rgb(57, 71, 203)" }}
+        style={{ backgroundColor: "#0bff00" }}
         isHome={false}
-        title="Historico"
+        title="Expense Registered"
       />
       <div className="container-historico">
         <div className="conteiner-text">
           <TextBox
             style={{ backgroundColor: "rgb(57, 71, 203)" }}
-            title="Portfolio balance"
-            valor="RS500,00"
+            title="Total spent"
+            valor="R$6,00"
           />
 
           <TextBox
             style={{ backgroundColor: "rgb(57, 71, 203)" }}
-            title="Total spent"
-            valor="R$127,00"
+            title="portfolio balance"
+            valor="R$ 500,00"
           />
         </div>
-        <BasicTable />
+        <Accordions
+        expanded = 'painelTable'
+        />
+        
       </div>
 
       <Footer/>
@@ -34,4 +37,4 @@ const Historico = () => {
   );
 };
 
-export default Historico;
+export default selectedExpense;
