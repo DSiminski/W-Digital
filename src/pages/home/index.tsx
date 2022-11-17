@@ -1,30 +1,32 @@
 import React from "react";
-import * as S from "./styles"
 import { Header } from "../../componentes/header";
 import { Button, RadioGroup } from "@mui/material";
+import { Footer } from "../../componentes/footer";
 
 
 const Home = ( ) => {
   return (
-    <S.Container>
+    <div className="container">
       <Header
-         style={{ backgroundColor: "rgb(57, 71, 203)" }}
-         isLogin={true}
-         title="Welcome to your Wallet!"
+        style={{ backgroundColor: "rgb(57, 71, 203)" }}
+        isHome={false}
+        title="Home"
       />
+      <div className="container-home">
         <div className="container-inferior">
-            <div className="valor">
-              
-            </div>
+            <div className="valor"></div>
         </div>
-        <div className="container-two">
+      </div>
+      <div className="container-two">
         <Button onClick={() => {alert('clicked');}}>Expenses</Button>
-        </div>
-        <div className="container-three">
+      </div>
+      <div className="container-three">
         <Button onClick={() => {alert('clicked');}}>New Expenses</Button>
-        </div>
+      </div>
+      <Footer/>
+    </div>
      
-    </S.Container>
+      
   );
 };
 export default Home;
