@@ -3,6 +3,7 @@ import { Header } from "../../componentes/header";
 import { TextBox } from "../../componentes/textBox";
 import { BasicTable } from "../../componentes/BasicTable";
 import { Footer } from "../../componentes/footer";
+import { TextFieldComponent } from "../../componentes/textfield";
 
 const Register = () => {
   return (
@@ -12,21 +13,24 @@ const Register = () => {
         isHome={false}
         title="Historico"
       />
-      <div className="container-historico">
+      <div className="container-register">
         <div className="conteiner-text">
-          <TextBox
-            style={{ backgroundColor: "rgb(57, 71, 203)" }}
-            title="Portfolio balance"
-            valor="RS500,00"
+          <TextFieldComponent
+            style={{ width: "100%", color: "#ffff" }}
+            label="Nome"
+            type="text"
           />
+        </div>
 
-          <TextBox
-            style={{ backgroundColor: "rgb(57, 71, 203)" }}
-            title="Total spent"
-            valor="R$127,00"
+        <div className="conteiner-text">
+          <TextFieldComponent
+            style={{ width: "100%" }}
+            label="Valor"
+            type="number"
           />
         </div>
       </div>
+
 
       <Footer/>
     </div>
