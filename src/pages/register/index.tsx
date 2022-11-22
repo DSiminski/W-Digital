@@ -1,7 +1,5 @@
-import "./RegisterStyle.css";
+import "./registerStyle.css";
 import { Header } from "../../componentes/header";
-import { TextBox } from "../../componentes/textBox";
-import { BasicTable } from "../../componentes/BasicTable";
 import { Footer } from "../../componentes/footer";
 import { TextFieldComponent } from "../../componentes/textfield";
 
@@ -11,7 +9,7 @@ const Register = () => {
       <Header
         style={{ backgroundColor: "rgb(57, 71, 203)" }}
         isHome={false}
-        title="Historico"
+        title="Register"
       />
       <div className="container-register">
         <div className="conteiner-text">
@@ -30,8 +28,6 @@ const Register = () => {
           />
         </div>
       </div>
-
-
       <Footer/>
     </div>
   );

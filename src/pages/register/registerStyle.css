@@ -12,12 +12,12 @@ html {
   width: 100%;
 }
 
-.container-historico {
+.container-register {
   display: block;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 10px 90px 90px 80px
+  padding: 5% 30% 10% 30%;
 }
 
 .conteiner-text {

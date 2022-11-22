@@ -29,6 +29,42 @@ const Home = () => {
           <div className="valor"></div>
         </div>
 
+        <div className="container-Accordion">
+          <Accordion style={{ borderRadius: "15px", marginTop: "15px" }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              style={{
+                backgroundColor: "rgb(57, 71, 203)",
+                borderRadius: "15px",
+              }}
+            >
+              <Typography style={{ color: "#fff" }}>R$ 500,00</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <TextFieldComponent
+                  style={{ width: "80%", marginInlineStart: "45px" }}
+                  label="Valor"
+                  type="text"
+                />
+                <Button
+                  className="container-value"
+                  onClick={() => handleFunction()}
+                  style={{
+                    width: "40%",
+                    backgroundColor: "rgb(187, 186, 186)",
+                    margin: "2% 30% 2% 30%",
+                  }}
+                >
+                  Salvar
+                </Button>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        </div>
+
         <div className="container-input">
           <Button
             className="container-value"
@@ -45,45 +81,6 @@ const Home = () => {
           >
             New Expenses
           </Button>
-        </div>
-
-        <div className="container-Accordion">
-          <Accordion style={{ borderRadius: "15px" }}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-              style={{
-                backgroundColor: "rgb(57, 71, 203)",
-                borderRadius: "15px",
-              }}
-            >
-              <Typography style={{ color: "#fff" }}>R$ 500,00</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography >
-
-             
-                 
-                 <TextFieldComponent
-                    style={{ width: "80%"}}
-                    label="Valor"
-                    type="number"
-                  />
-                <Button
-                  className="container-value"
-                  onClick={() => handleFunction()}
-                  style={{
-                    width: "45%",
-                    backgroundColor: "rgb(187, 186, 186)",
-                    margin: "10px"
-                  }}
-                >
-                  Salvar
-                </Button>
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
         </div>
       </div>
       <Footer />
