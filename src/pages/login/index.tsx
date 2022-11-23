@@ -7,6 +7,7 @@ import { Header } from "../../componentes/header";
 import { TextBox } from "../../componentes/textBox";
 import { Footer } from "../../componentes/footer";
 import { useNavigate } from 'react-router-dom';
+import { Button } from "@mui/material";
 
 import { Accordions } from "../../componentes/Accordion2";
 
@@ -51,10 +52,16 @@ const Login = () => {
             </div>
           </form>
         </div>
+       
       </div>
+    
       <Footer />
     </div>
   );
 };
 
 export default Login;
+function handleFunction(): void {
+  throw new Error("Function not implemented.");
+}
+

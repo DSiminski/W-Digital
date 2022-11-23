@@ -2,9 +2,11 @@ import React from "react";
 import "./styles.css";
 
 import { Header } from "../../componentes/header";
-import { Button } from "@mui/material";
 import { Footer } from "../../componentes/footer";
-import { useNavigate } from "react-router-dom";
+import { TextBox } from "../../componentes/textBox";
+import { Container } from "@mui/system";
+import { Button } from "@mui/material";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import { TextFieldComponent } from "../../componentes/textfield";
 import Accordion from "@mui/material/Accordion";
@@ -82,9 +84,20 @@ const Home = () => {
             New Expenses
           </Button>
         </div>
+
+        <div className="container-input">
+          <Button
+            className="container-value"
+            onClick={() => navigate ('/expense')}
+          >
+            New Expenses
+          </Button>
+        </div>
+        
       </div>
       <Footer />
     </div>
+       
   );
 };
 export default Home;
