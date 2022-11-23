@@ -61,7 +61,3 @@ const SelectedExpense = () => {
 };
 
 export default SelectedExpense;
-function handleFunction(): void {
-  throw new Error("Function not implemented.");
-}
-

@@ -30,12 +30,6 @@ export const Accordions = ({expanded, isTable}: AccordionProps) => {
           </Typography>
         </AccordionDetails>
       </Accordion> 
-
-
-      
-
-
-      
     </div>
   );
 };

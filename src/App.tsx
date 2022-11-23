@@ -16,9 +16,6 @@ function App() {
            <Route path="/historico" element={< Historico/>}/> 
            <Route path="/expense" element={< Expense/>}/> 
            <Route path="/home" element={< Home/>}/> 
-          
-
-
         </Routes>
     </BrowserRouter>
   )
