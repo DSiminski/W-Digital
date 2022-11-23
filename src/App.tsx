@@ -4,7 +4,7 @@ import Login from "./pages/login";
 import Historico from './pages/historico';
 import Home from './pages/home';
 import SelectedExpense from './pages/selectedExpense';
-import { Expense } from './pages/expense/expense';
+import Register  from './pages/register';
 function App() {
 
   return (
@@ -14,8 +14,9 @@ function App() {
            <Route path="/Resgistrado" element={<SelectedExpense/>}/> 
            <Route path="/home" element={< Home/>}/> 
            <Route path="/historico" element={< Historico/>}/> 
-           <Route path="/expense" element={< Expense/>}/> 
+           <Route path="/newRegister" element={< Register/>}/> 
            <Route path="/home" element={< Home/>}/> 
+           <Route path="/cadastrar" element={< Home/>}/> 
         </Routes>
     </BrowserRouter>
   )

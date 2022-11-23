@@ -40,6 +40,7 @@ const Home = () => {
               style={{
                 backgroundColor: "rgb(57, 71, 203)",
                 borderRadius: "15px",
+                height: "30%"
               }}
             >
               <Typography style={{ color: "#fff" }}>R$ 500,00</Typography>
@@ -55,7 +56,7 @@ const Home = () => {
                   className="container-value"
                   onClick={() => handleFunction()}
                   style={{
-                    width: "40%",
+                    width: "90px",
                     backgroundColor: "rgb(187, 186, 186)",
                     margin: "2% 30% 2% 30%",
                   }}
@@ -79,21 +80,11 @@ const Home = () => {
         <div className="container-input">
           <Button
             className="container-value"
-            onClick={() => navigate("/register")}
+            onClick={() => navigate("/newRegister")}
           >
             New Expenses
           </Button>
-        </div>
-
-        <div className="container-input">
-          <Button
-            className="container-value"
-            onClick={() => navigate ('/expense')}
-          >
-            New Expenses
-          </Button>
-        </div>
-        
+        </div> 
       </div>
       <Footer />
     </div>

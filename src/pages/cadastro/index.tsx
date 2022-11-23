@@ -1,20 +1,27 @@
-import React from "react";
-import { LoginTypes } from "./login.types";
-import "./loginStyle.css";
+import React, { useState } from "react";
+import "./cadastroStyle.css";
 import { ButtonComponent } from "../../componentes/button";
 import { TextFieldComponent } from "../../componentes/textfield";
 import { Header } from "../../componentes/header";
-import { TextBox } from "../../componentes/textBox";
 import { Footer } from "../../componentes/footer";
 import { useNavigate } from 'react-router-dom';
-import { Button } from "@mui/material";
-
-import { Accordions } from "../../componentes/Accordion2";
+import { addUser, useAppSelector } from "../../store/storeLogin";
+import { useDispatch } from "react-redux";
 
 function handleForm() {}
 
-const Login = () => {
+const Cadastro = () => {
+  const dispatch = useDispatch();
+  const usersState = useAppSelector((state) => state.userReducer);
 
+  const [user, setUser] = useState({
+    nome: '',
+    email: '',
+    password: ''
+  });
+  const handleSubmit = () => {
+    dispatch(addUser(user));
+  }
   const navigate = useNavigate();
 
   return (
@@ -27,6 +34,15 @@ const Login = () => {
       <div className="container-login">
         <div className="wrap-login">
           <form className="login-form">
+          <div className="wrap-input">
+              <TextFieldComponent
+                style={{ width: "100%" }}
+                label="Nome"
+                type="text"
+                name="nome"
+                onChange={(e) => setUser({...user, nome: e.target.value})}
+              />
+            </div>
             <div className="wrap-input">
               <TextFieldComponent
                 style={{ width: "100%" }}
@@ -46,28 +62,16 @@ const Login = () => {
             <div className="container-login-form-btn">
               <ButtonComponent
                 themeColor="rgb(57, 71, 203)"
-                title="Entrar"
-                onClick={() => navigate('/home')}
+                title="Cadatrar"
+                onClick={() => {handleSubmit(); navigate('/cadastrar')}}
               />
             </div>
-
-            <div className="container-login-form-btn" >
-                   
-                 <h3  style={{color: '' }}> </h3> <h3 className="container-login-form-btn" onClick={() => navigate('/cadastrar')} style={{color: "rgb(57, 71, 203)"}}> Cadastar </h3>
-            </div>
-
           </form>
         </div>
-       
       </div>
-    
       <Footer />
     </div>
   );
 };
 
-export default Login;
-function handleFunction(): void {
-  throw new Error("Function not implemented.");
-}
-
+export default Cadastro;
