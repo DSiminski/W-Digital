@@ -1,10 +1,23 @@
 import React from "react";
+import "./styles.css";
+
 import { Header } from "../../componentes/header";
-import { Button, RadioGroup } from "@mui/material";
 import { Footer } from "../../componentes/footer";
+import { TextBox } from "../../componentes/textBox";
+import { Container } from "@mui/system";
+import { Button } from "@mui/material";
+import { Navigate, useNavigate } from "react-router-dom";
+import { TextFieldComponent } from "../../componentes/textfield";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
+const Home = () => {
+  const handleFunction = () => {};
+  const navigate = useNavigate();
 
-const Home = ( ) => {
   return (
     <div className="container">
       <Header
@@ -14,19 +27,25 @@ const Home = ( ) => {
       />
       <div className="container-home">
         <div className="container-inferior">
-            <div className="valor"></div>
+          <div className="valor">
+            
+          </div>
         </div>
+
+        <div className="container-input">
+          <Button
+            className="container-value"
+            onClick={() => navigate ('/expense')}
+          >
+            New Expenses
+          </Button>
+        </div>
+        
       </div>
-      <div className="container-two">
-        <Button onClick={() => {alert('clicked');}}>Expenses</Button>
-      </div>
-      <div className="container-three">
-        <Button onClick={() => {alert('clicked');}}>New Expenses</Button>
-      </div>
-      <Footer/>
+      <Footer />
+  
     </div>
        
   );
 };
 export default Home;
-

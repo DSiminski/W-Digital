@@ -6,12 +6,17 @@ import { TextFieldComponent } from "../../componentes/textfield";
 import { Header } from "../../componentes/header";
 import { TextBox } from "../../componentes/textBox";
 import { Footer } from "../../componentes/footer";
+import { useNavigate } from 'react-router-dom';
+import { Button } from "@mui/material";
 
 import { Accordions } from "../../componentes/Accordion2";
 
 function handleForm() {}
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="container">
       <Header
@@ -42,15 +47,21 @@ const Login = () => {
               <ButtonComponent
                 themeColor="rgb(57, 71, 203)"
                 title="Entrar"
-                onClick={() => handleForm()}
+                onClick={() => navigate('/home')}
               />
             </div>
           </form>
         </div>
+       
       </div>
+    
       <Footer />
     </div>
   );
 };
 
 export default Login;
+function handleFunction(): void {
+  throw new Error("Function not implemented.");
+}
+

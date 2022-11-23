@@ -8,31 +8,34 @@ import { BasicTable } from "../../componentes/BasicTable";
 
 interface AccordionProps {
   expanded?: string;
+  isTable?: boolean;
 }
 
-export const Accordions = ({expanded }: AccordionProps) => {
+export const Accordions = ({expanded, isTable}: AccordionProps) => {
   return (
     <div>
 
-       <Accordion expanded={expanded === "painelTable"} >
+      <Accordion  style={{ borderRadius: "15px" }}>
         <AccordionSummary
-          style={{ backgroundColor: "rgb(57, 71, 203)" }}
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3bh-content"
-          id="panel3bh-header"
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+          style={{ backgroundColor: "rgb(57, 71, 203)", borderRadius: "15px" }}
         >
-          <Typography sx={{ width: "33%", flexShrink: 0 }} 
-          style={{ color: "#ffff" }}
-          >
-            Historic
-          </Typography>
+          <Typography style={{ color: "#ffff" }} >Accordion 1</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <BasicTable />
+            <BasicTable/>
           </Typography>
         </AccordionDetails>
-      </Accordion>
+      </Accordion> 
+
+
+      
+
+
+      
     </div>
   );
 };

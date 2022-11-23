@@ -1,21 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Knewave&family=Nunito:wght@400;600;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body,
 html {
   font-family: Nunito, sans-serif;
+  height: 100%;
 }
+
 
 .container {
+  height: 100%;
   width: 100%;
-  margin: 0 auto;
 }
 
-.container-historico {
+.container-register {
   display: block;
   flex-wrap: wrap;
   align-items: center;

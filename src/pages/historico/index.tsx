@@ -3,6 +3,7 @@ import { Header } from "../../componentes/header";
 import { TextBox } from "../../componentes/textBox";
 import { BasicTable } from "../../componentes/BasicTable";
 import { Footer } from "../../componentes/footer";
+import { Button } from "@mui/material";
 
 const Historico = () => {
   return (
@@ -28,10 +29,14 @@ const Historico = () => {
         </div>
         <BasicTable />
       </div>
-
+    
       <Footer/>
     </div>
   );
 };
 
 export default Historico;
+function handleFunction(): void {
+  throw new Error("Function not implemented.");
+}
+

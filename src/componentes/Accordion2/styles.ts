@@ -2,14 +2,11 @@ import styled from 'styled-components';
 
 
 
-
-
 export const Container = styled.div`
 width:100%;
 background-color: #fff;
 border-radius: 80px;
 overflow: hidden;
-padding: 20px ;
 border-color: #6a7dfe;
 border-style: solid;
 `;
