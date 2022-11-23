@@ -3,9 +3,13 @@ import { Header } from "../../componentes/header";
 import { TextBox } from "../../componentes/textBox";
 import { BasicTable } from "../../componentes/BasicTable";
 import { Footer } from "../../componentes/footer";
-import { Button } from "@mui/material";
+import { ButtonComponent } from "../../componentes/button";
+import { Navigate, useNavigate } from "react-router-dom"; 
 
 const Historico = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="container">
       <Header
@@ -31,6 +35,11 @@ const Historico = () => {
       </div>
     
       <Footer/>
+      <ButtonComponent
+                themeColor="rgb(57, 71, 203)"
+                title="Voltar"
+                onClick={() => navigate('/home')}
+              />
     </div>
   );
 };

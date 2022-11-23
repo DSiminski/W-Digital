@@ -13,6 +13,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { ButtonComponent } from "../../componentes/button";
 
 const Home = () => {
   const handleFunction = () => {};
@@ -42,8 +43,15 @@ const Home = () => {
         </div>
         
       </div>
-      <Footer />
+      <div className=""
+      <ButtonComponent
+                position="left"
+                themeColor="rgb(57, 71, 203)"
+                title="Voltar"
+                onClick={() => navigate('/home')}
+              />
   
+    <Footer />
     </div>
        
   );

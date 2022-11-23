@@ -3,10 +3,12 @@ import { Header } from "../../componentes/header";
 import { Footer } from "../../componentes/footer";
 import { Accordion, AccordionActions, Button } from "@mui/material";
 import { TextField } from "@mui/material";
+import { ButtonComponent } from "../../componentes/button";
+import { Navigate, useNavigate } from "react-router-dom"; 
 
 function handleForm() {}
 import { TextFieldComponent } from "../../componentes/textfield";
-
+const navigate = useNavigate();
 const Register = () => {
   return (
     <div className="container">
@@ -56,6 +58,7 @@ const Register = () => {
           </form>
         </div>
       </div>
+
       <Footer/>
     </div>
   );

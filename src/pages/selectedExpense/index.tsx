@@ -12,8 +12,13 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Button } from "@mui/material";
+import { ButtonComponent } from "../../componentes/button";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const SelectedExpense = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="container">
       <Header
@@ -54,7 +59,11 @@ const SelectedExpense = () => {
           </AccordionDetails>
         </Accordion>
       </div>
-
+      <ButtonComponent
+                themeColor="rgb(57, 71, 203)"
+                title="Entrar"
+                onClick={() => navigate('/home')}
+              />
       <Footer />
     </div>
   );
