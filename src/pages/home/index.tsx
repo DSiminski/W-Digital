@@ -43,15 +43,18 @@ const Home = () => {
         </div>
         
       </div>
-      <div className=""
+      <div className="component-button">
       <ButtonComponent
-                position="left"
                 themeColor="rgb(57, 71, 203)"
                 title="Voltar"
-                onClick={() => navigate('/home')}
+                onClick={() => navigate('/login')}
               />
-  
-    <Footer />
+      </div>
+      <Footer 
+        style={{ backgroundColor: "rgb(57, 71, 203)" }}
+        isEnd={false}
+        bottom="Welcome dear!"
+      />
     </div>
        
   );

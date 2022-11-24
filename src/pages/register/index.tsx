@@ -59,7 +59,11 @@ const Register = () => {
         </div>
       </div>
 
-      <Footer/>
+      <Footer
+        style={{ backgroundColor: "rgb(57, 71, 203)" }}
+        isEnd={false}
+        bottom="Made by Maria Julia and Dayane"
+      />
     </div>
   );
 };

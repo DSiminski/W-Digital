@@ -9,3 +9,9 @@ body,
 html {
   font-family: Nunito, sans-serif;
 }
+.component-button {
+    position: relative;
+    align-content: flex-end;
+    left: 1200px;
+    top: 400px;
+}

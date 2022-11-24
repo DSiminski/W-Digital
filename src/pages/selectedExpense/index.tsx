@@ -64,7 +64,11 @@ const SelectedExpense = () => {
                 title="Entrar"
                 onClick={() => navigate('/home')}
               />
-      <Footer />
+      <Footer 
+        style={{ backgroundColor: "rgb(57, 71, 203)" }}
+        isEnd={false}
+        bottom="always come back!"
+      />
     </div>
   );
 };

@@ -33,13 +33,17 @@ const Historico = () => {
         </div>
         <BasicTable />
       </div>
-    
-      <Footer/>
       <ButtonComponent
                 themeColor="rgb(57, 71, 203)"
                 title="Voltar"
                 onClick={() => navigate('/home')}
               />
+      <Footer
+        style={{ backgroundColor: "rgb(57, 71, 203)" }}
+        isEnd={false}
+        bottom="Made by Maria Julia and Dayane"
+      />
+    
     </div>
   );
 };

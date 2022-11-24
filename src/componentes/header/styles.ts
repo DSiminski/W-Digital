@@ -15,5 +15,5 @@ export const Container = styled.div`
 export const Message = styled.div`
  font-family: Helvetica;
  color: #ffffff;
- align-items: left; 
+ align-items: center; 
 `;
