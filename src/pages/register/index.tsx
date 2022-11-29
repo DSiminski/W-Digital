@@ -87,7 +87,7 @@ const Register = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container"  data-testid="registerTest">
       <Header
         style={{ backgroundColor: "rgb(57, 71, 203)" }}
         isHome={false}

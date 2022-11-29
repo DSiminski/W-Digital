@@ -5,14 +5,13 @@ import { TextFieldComponent } from "../../componentes/textfield";
 import { Header } from "../../componentes/header";
 import { Footer } from "../../componentes/footer";
 import { useNavigate } from 'react-router-dom';
-import { addUser, useAppSelector } from "../../store/storeLogin";
 import { useDispatch } from "react-redux";
 
 function handleForm() {}
 
 const Cadastro = () => {
   const dispatch = useDispatch();
-  const usersState = useAppSelector((state) => state.userReducer);
+  //const usersState = useAppSelector((state) => state.userReducer);
 
   const [user, setUser] = useState({
     nome: '',
@@ -20,12 +19,12 @@ const Cadastro = () => {
     password: ''
   });
   const handleSubmit = () => {
-    dispatch(addUser(user));
+   // dispatch(addUser(user));
   }
   const navigate = useNavigate();
 
   return (
-    <div className="container">
+    <div className="container" data-testid="cadastroTest">
       <Header
         style={{ backgroundColor: "rgb(57, 71, 203)" }}
         isHome={false}
