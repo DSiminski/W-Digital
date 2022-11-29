@@ -7,7 +7,7 @@ import { Button } from "@mui/material";
 
 const Historico = () => {
   return (
-    <div className="container">
+    <div className="container"  data-testid="historicoTest">
       <Header
         style={{ backgroundColor: "rgb(57, 71, 203)" }}
         isHome={false}

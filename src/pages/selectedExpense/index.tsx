@@ -21,7 +21,7 @@ const SelectedExpense = () => {
         isHome={false}
         title="Expense Registered"
       />
-      <div className="container-historico">
+      <div className="container-historico"  data-testid="selectedExpenseTest">
         <div className="conteiner-text">
           <TextBox
             style={{ backgroundColor: "rgb(57, 71, 203)" }}

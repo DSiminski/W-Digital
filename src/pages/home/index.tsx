@@ -16,7 +16,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="container">
+    <div className="container"  data-testid="homeTest">
       <Header
         style={{ backgroundColor: "rgb(57, 71, 203)" }}
         isHome={false}
