@@ -6,6 +6,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import type {RootState} from '../../redux/store'
+import {useDispatch, useSelector} from 'react-redux'
+import {despesa} from '../../interface/despesa'
+
 
 function createData(
   Date: string,
@@ -17,6 +21,8 @@ function createData(
   return { Date, Item, TAG, Payment, Valor };
 }
 
+const stateGeral = useSelector((state: RootState) => state);
+
 const rows = [
   createData('29/10/22', 'T-shirt', 'clothing', 'money', 21.5),
   createData('29/10/22', 'Candy', 'food', 'money', 40.3),
@@ -24,6 +30,7 @@ const rows = [
   createData('21/10/22', 'Tea', 'food', 'money', 4.3),
   createData('21/10/22', 'lunch', 'food', 'money', 18.9),
 ];
+
 
 export function BasicTable() {
   return (
@@ -35,24 +42,28 @@ export function BasicTable() {
             <TableCell align="right">Item</TableCell>
             <TableCell align="right">TAG</TableCell>
             <TableCell align="right">Payment</TableCell>
-            <TableCell align="right">Valor</TableCell>
+            <TableCell align="right">Moeda</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {stateGeral.geral.despesas.length > 0 && stateGeral.geral.despesasExibidas.map((item: despesa, index: number) => {
+                                let data = new Date(item.data.getFullYear(), item.data.getMonth(), item.data.getDate())
+                                data.setDate(data.getDate() + 1)
+                                const dataFormatada = '' + data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear()
+                                return (
             <TableRow
-              key={row.Date}
+              key={item.moeda}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.Date}
+                {dataFormatada}
               </TableCell>
-              <TableCell align="right">{row.Item}</TableCell>
-              <TableCell align="right">{row.TAG}</TableCell>
-              <TableCell align="right">{row.Payment}</TableCell>
-              <TableCell align="right">{row.Valor}</TableCell>
+              <TableCell align="right">{item.tag}</TableCell>
+              <TableCell align="right">{item.metodoDePagamento}</TableCell>
+              <TableCell align="right">{item.moeda}</TableCell>
             </TableRow>
-          ))}
+          )})}
+
         </TableBody>
       </Table>
     </TableContainer>

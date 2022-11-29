@@ -1,13 +1,9 @@
 import React from "react";
 import "./styles.css";
-
 import { Header } from "../../componentes/header";
 import { Footer } from "../../componentes/footer";
-import { TextBox } from "../../componentes/textBox";
-import { Container } from "@mui/system";
 import { Button } from "@mui/material";
 import { Navigate, useNavigate } from "react-router-dom";
-
 import { TextFieldComponent } from "../../componentes/textfield";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";

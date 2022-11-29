@@ -5,10 +5,15 @@ import Historico from './pages/historico';
 import Home from './pages/home';
 import SelectedExpense from './pages/selectedExpense';
 import Register  from './pages/register';
+import { Provider } from 'react-redux';
+import {store} from './redux/store'
+
 function App() {
 
   return (
-    <BrowserRouter>
+
+    <Provider store={store}>
+       <BrowserRouter>
         <Routes>
            <Route path="/" element={< Login/>}/> 
            <Route path="/Resgistrado" element={<SelectedExpense/>}/> 
@@ -19,6 +24,9 @@ function App() {
            <Route path="/cadastrar" element={< Home/>}/> 
         </Routes>
     </BrowserRouter>
+
+    </Provider>
+   
   )
 }
 
