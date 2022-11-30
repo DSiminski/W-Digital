@@ -9,3 +9,11 @@ export const FooterContainer = styled.div`
   background-color: #3947CB;
 
 `;
+export const Container = styled.div`
+padding : 60px 10px 60px 10px;
+`;
+export const Message = styled.div`
+ font-family: Helvetica;
+ color: #ffffff;
+ align-items: center; 
+`;
