@@ -9,6 +9,9 @@ import Home from './pages/home';
 import SelectedExpense from './pages/selectedExpense';
 import Register  from './pages/register';
 
+
+
+
 function renderizaPagina(element) {
   render(
     <Provider store={store}>

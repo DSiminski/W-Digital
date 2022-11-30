@@ -6,12 +6,13 @@ import { Header } from "../../componentes/header";
 import { Footer } from "../../componentes/footer";
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
+import { useAppSelector } from "../../redux/store";
 
 function handleForm() {}
 
 const Cadastro = () => {
   const dispatch = useDispatch();
-  //const usersState = useAppSelector((state) => state.userReducer);
+  const usersState = useAppSelector((state) => state);
 
   const [user, setUser] = useState({
     nome: '',
