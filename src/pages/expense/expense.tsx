@@ -19,7 +19,7 @@ export function Expense (){
             style={{ backgroundColor: "rgb(57, 71, 203)" }}
             isFinite={false}
             title="Chao"
-        />
+        />  
     </div>
     );
 }
