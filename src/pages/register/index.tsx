@@ -96,33 +96,38 @@ const Register = () => {
       <div className="container-register">
         <form className="register-form">
           <div className="wrap-input">
+          <select 
+            style={{ width: "19%"}}
+            data-testid="home-page-select-moeda"
+            placeholder={"Moeda"}
+            value={stateGeral.geral.moeda}
+            onChange={(e) => dispatch(editaMoeda(e.target.value))}
+          >
+            <option value="BRL">BRL</option>
+            <option value="DOLAR">USD</option>
+          </select>
+
             <TextFieldComponent
-              style={{ width: "100%" }}
+              style={{ width: "80%" }}
               data-testid="home-page-input-valor"
               type="number"
               name= "Valor"
               value={stateGeral.geral.valor}
               onChange={(e) => dispatch(editaValor(e.target.value))}
             />
+           
           </div>
 
           <div className="wrap-input">
             <TextFieldComponent
+                style={{ width: "100%" }}
                 name="Nome"
                 value={stateGeral.geral.descricao}
                 onChange={(e) => dispatch(editaDescricao(e.target.value))}
             />
           </div>
 
-          <select
-            data-testid="home-page-select-moeda"
-            placeholder={"Moeda"}
-            value={stateGeral.geral.moeda}
-            onChange={(e) => dispatch(editaMoeda(e.target.value))}
-          >
-            <option value="BRL">REAL</option>
-            <option value="DOLAR">DOLAR</option>
-          </select>
+          
 
           <div className="container-accordion">
             <select
@@ -130,6 +135,7 @@ const Register = () => {
               placeholder={"Metodo de Pagamento"}
               value={stateGeral.geral.metodoDePagamento}
               onChange={(e) => dispatch(editaMetodoDePagamento(e.target.value))}
+              style={{ width: "100%"}}
             >
               <option value="DINHEIRO">Dinheiro</option>
               <option value="CARTÃO DE DÉBITO">Cartão de débito</option>
@@ -139,6 +145,7 @@ const Register = () => {
 
           <div className="container-accordion">
             <select
+              style={{ width: "100%"}}
               data-testid="home-page-select-tag"
               placeholder={"Tag"}
               value={stateGeral.geral.tag}

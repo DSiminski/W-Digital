@@ -21,7 +21,7 @@ function createData(
   return { Date, Item, TAG, Payment, Valor };
 }
 
-const stateGeral = useSelector((state: RootState) => state);
+//const stateGeral = useSelector((state: RootState) => state);
 
 const rows = [
   createData('29/10/22', 'T-shirt', 'clothing', 'money', 21.5),
