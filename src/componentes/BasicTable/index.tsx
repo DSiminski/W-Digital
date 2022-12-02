@@ -45,7 +45,7 @@ export function BasicTable() {
             <TableCell align="right">Moeda</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        {/* <TableBody>
           {stateGeral.geral.despesas.length > 0 && stateGeral.geral.despesasExibidas.map((item: despesa, index: number) => {
                                 let data = new Date(item.data.getFullYear(), item.data.getMonth(), item.data.getDate())
                                 data.setDate(data.getDate() + 1)
@@ -64,7 +64,7 @@ export function BasicTable() {
             </TableRow>
           )})}
 
-        </TableBody>
+        </TableBody> */}
       </Table>
     </TableContainer>
   );

@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 
 interface ButtonProps {
   themeColor: string;
-  isTitled: boolean;
   disabled?: boolean;
   dropDown?: boolean;
   height?: string;
@@ -17,8 +16,6 @@ interface ButtonProps {
 export const StyledButton = styled(Button)<ButtonProps>`
   &&& {
     ${({
-      isTitled,
-      disablePaddingInline,
       height,
       width,
       themeColor,
@@ -31,13 +28,6 @@ export const StyledButton = styled(Button)<ButtonProps>`
       justify-content: center;
       gap: 0.8rem;
       padding-block: 0.8rem;
-      ${() => {
-        if (!disablePaddingInline) {
-          return css`
-            padding-inline: ${isTitled ? "3.2rem" : "1.2rem"};
-          `;
-        }
-      }}
       text-align: center;
       font-size: 1.2rem;
       line-height: 0;

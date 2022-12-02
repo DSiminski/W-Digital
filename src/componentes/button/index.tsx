@@ -5,52 +5,29 @@ interface ButtonProps {
   title?: string | null;
   type?: 'button' | 'submit' | 'reset';
   themeColor?:string;
-
+  color?:string;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
   disabled?: boolean;
   width?: string;
-  height?: string;
   style?: React.CSSProperties;
-  fullWidth?: boolean;
-  border?: boolean;
-  disableRipple?: boolean;
-  disablePaddingInline?: boolean;
-  iconTop?: boolean;
-  iconSize?: string;
+  value?: React.InputHTMLAttributes<HTMLInputElement> | string | undefined | number | readonly string[] 
 }
 
 export const ButtonComponent = ({
-  disabled,
   title,
   themeColor = '#6a7dfe',
   onClick,
   width,
-  height,
   style,
-  fullWidth,
-  disableRipple,
-  disablePaddingInline,
-  border = true,
-  iconTop,
-  iconSize,
-  type
+  type,
 }: ButtonProps) => {
   return (
     
       <S.StyledButton
-        iconSize={iconSize}
-        isTitled={Boolean(title)}
-        disabled={disabled}
         themeColor={themeColor}
         onClick={onClick}
         width={width}
-        height={height}
         style={style}
-        fullWidth={fullWidth}
-        border={border}
-        disableRipple={disableRipple}
-        disablePaddingInline={disablePaddingInline}
-        iconTop={iconTop}
         type={type}
       >
         {title}

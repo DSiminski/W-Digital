@@ -7,7 +7,9 @@ import { TextFieldComponent } from "../../componentes/textfield";
 import { despesa } from "../../interface/despesa";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../redux/store";
-import { editaAtualizaValorDolar, editaDescricao,
+import {
+  editaAtualizaValorDolar,
+  editaDescricao,
   editaDataDaDespesa,
   editaMoeda,
   editaTag,
@@ -15,8 +17,9 @@ import { editaAtualizaValorDolar, editaDescricao,
   editaValorDolar,
   editaDespesas,
   editaMetodoDePagamento,
-  editaValorTotal, } from "../../redux/geralSlice";
-
+  editaValorTotal,
+} from "../../redux/geralSlice";
+import { ButtonComponent } from "../../componentes/button";
 
 const Register = () => {
   let DateType: Date = new Date(Date.now());
@@ -54,11 +57,7 @@ const Register = () => {
   function cadastrarDespesa() {
     const newExpense: despesa = createExpense();
     clearExpense();
-
-    //guarda a nova despesa no redux state
     dispatch(editaDespesas([...stateGeral.geral.despesas, newExpense]));
-
-    //atualiza o valor do dolar para calcular o valor total das despesas
     atualizaValorDolar();
   }
 
@@ -73,7 +72,7 @@ const Register = () => {
       moeda: stateGeral.geral.moeda,
       tag: stateGeral.geral.tag,
       data: stateGeral.geral.dataDaDespesa,
-      descricao:stateGeral.geral.descricao,
+      descricao: stateGeral.geral.descricao,
     };
   }
 
@@ -87,55 +86,67 @@ const Register = () => {
   }
 
   return (
-    <div className="container"  data-testid="registerTest">
+    <div className="container" data-testid="registerTest">
       <Header
         style={{ backgroundColor: "rgb(57, 71, 203)" }}
         isHome={false}
         title="Register"
       />
+      ,
       <div className="container-register">
         <form className="register-form">
           <div className="wrap-input">
-          <select 
-            style={{ width: "19%"}}
-            data-testid="home-page-select-moeda"
-            placeholder={"Moeda"}
-            value={stateGeral.geral.moeda}
-            onChange={(e) => dispatch(editaMoeda(e.target.value))}
-          >
-            <option value="BRL">BRL</option>
-            <option value="DOLAR">USD</option>
-          </select>
+            <select
+              style={{
+                width: "15%",
+                borderRadius: "10px",
+                overflow: "hidden",
+                padding: "15px",
+                borderColor: "#6a7dfe",
+                borderStyle: "solid",
+                marginRight: "20px",
+              }}
+              data-testid="home-page-select-moeda"
+              placeholder={"Moeda"}
+              value={stateGeral.geral.moeda}
+              onChange={(e) => dispatch(editaMoeda(e.target.value))}
+            >
+              <option value="BRL">BRL</option>
+              <option value="DOLAR">USD</option>
+            </select>
 
             <TextFieldComponent
-              style={{ width: "80%" }}
+              style={{ width: "78%" }}
               data-testid="home-page-input-valor"
               type="number"
-              name= "Valor"
+              name="Valor"
+              label="Valor"
               value={stateGeral.geral.valor}
               onChange={(e) => dispatch(editaValor(e.target.value))}
             />
-           
           </div>
+          <TextFieldComponent
+            style={{ width: "100%" }}
+            name="Nome"
+            label="Descrição"
+            value={stateGeral.geral.descricao}
+            onChange={(e) => dispatch(editaDescricao(e.target.value))}
+          />
 
-          <div className="wrap-input">
-            <TextFieldComponent
-                style={{ width: "100%" }}
-                name="Nome"
-                value={stateGeral.geral.descricao}
-                onChange={(e) => dispatch(editaDescricao(e.target.value))}
-            />
-          </div>
-
-          
-
-          <div className="container-accordion">
+          <div className="conteiner-select">
             <select
               data-testid="home-page-select-metodoDePagamento"
               placeholder={"Metodo de Pagamento"}
               value={stateGeral.geral.metodoDePagamento}
               onChange={(e) => dispatch(editaMetodoDePagamento(e.target.value))}
-              style={{ width: "100%"}}
+              style={{
+                width: "100%",
+                borderRadius: "10px",
+                overflow: "hidden",
+                padding: "8px",
+                borderColor: "#6a7dfe",
+                borderStyle: "solid",
+              }}
             >
               <option value="DINHEIRO">Dinheiro</option>
               <option value="CARTÃO DE DÉBITO">Cartão de débito</option>
@@ -143,9 +154,16 @@ const Register = () => {
             </select>
           </div>
 
-          <div className="container-accordion">
+          <div className="conteiner-select">
             <select
-              style={{ width: "100%"}}
+              style={{
+                width: "100%",
+                borderRadius: "10px",
+                overflow: "hidden",
+                padding: "8px",
+                borderColor: "#6a7dfe",
+                borderStyle: "solid",
+              }}
               data-testid="home-page-select-tag"
               placeholder={"Tag"}
               value={stateGeral.geral.tag}
@@ -159,9 +177,15 @@ const Register = () => {
             </select>
           </div>
 
-          <input data-testid="home-page-button-submit" type={"submit"} 
-                               onClick={cadastrarDespesa}
-                               value={"+ adicionar"}/>
+          <div className="container-login-form-btn">
+            <ButtonComponent
+              themeColor="rgb(57, 71, 203)"
+              onClick={cadastrarDespesa}
+              title="Entrar"
+              value={"+ adicionar"}
+              type={"submit"}
+            />
+          </div>
         </form>
       </div>
       <Footer />
