@@ -6,7 +6,6 @@ background-color: #0000CD;
 display: flex;
 align-items: center;
 justify-content: space-evenly;
-position: absolute;
 bottom: 0;
 
 `;

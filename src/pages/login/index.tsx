@@ -96,6 +96,7 @@ const Login = () => {
                 themeColor="rgb(57, 71, 203)"
                 title="Entrar"
                 onClick={useLogin}
+                style={{width:"150px"}}
               />
             </div>
 
