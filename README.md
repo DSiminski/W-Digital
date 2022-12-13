@@ -12,11 +12,13 @@
 
 
 2. Introdução
+
 O projeto a ser documentado se trata de uma carteira digital desenvolvida através dos conteúdos aprendidos em sala de aula. Um sistema baseado em uma aplicação 
 front-end, com testes, passando pelo deploy, validação e por fim a documentação deste. Consiste em uma carteira de cadastro do usuário, cadastro de despesas e 
 lucros, e histórico de despesas.
 
 3. Visão Geral
+
 ![visao-geral-da-arquitetura](https://user-images.githubusercontent.com/.PNG)
 
 4. Mecanismos arquiteturais
